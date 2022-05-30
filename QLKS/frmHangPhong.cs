@@ -40,9 +40,6 @@ namespace QLKS
             this.kIEUPHONGTableAdapter.Connection = Program.conn;
             this.kIEUPHONGTableAdapter.Fill(this.DS.KIEUPHONG);
 
-            this.cTPHIEUDATTableAdapter.Connection = Program.conn;
-            this.cTPHIEUDATTableAdapter.Fill(this.DS.CTPHIEUDAT);
-
             this.pHONGTableAdapter.Connection = Program.conn;
             this.pHONGTableAdapter.Fill(this.DS.PHONG);
 
@@ -224,9 +221,9 @@ namespace QLKS
                 return;
             }
 
-            if(bdsCTPD.Count > 0)
+            if(bdsPhong.Count > 0)
             {
-                MessageBox.Show("Hạng phòng này đã được sử dụng, không thể xóa!");
+                MessageBox.Show("Hạng phòng này đã được sử dụng cho các phòng, không thể xóa!");
                 return;
             }
 

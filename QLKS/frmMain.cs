@@ -223,5 +223,20 @@ namespace QLKS
                 phong.Show();
             }
         }
+
+        private void btnHD_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form f = CheckExists(typeof(frmHoaDon));
+            if (f != null)
+            {
+                f.Activate();
+            }
+            else
+            {
+                frmHoaDon phong = new frmHoaDon();
+                phong.MdiParent = this;
+                phong.Show();
+            }
+        }
     }
 }

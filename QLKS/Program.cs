@@ -20,6 +20,7 @@ namespace QLKS
         public static string maPhongDaChon = ""; // đặt trước
         public static string mapdDaChon = ""; // lập PT cho PD
         public static string madvDaChon = "";
+        public static string maptDaChon = "";
 
         public static DateTime tgBdThueCuaPD; // dùng trong việc gán thời gian đến thuê khi chuyển từ CTPD -> CTPT
         public static DateTime tgBdThue; // dùng để gán vào thời gian bắt đầu trong form frmChonPhong

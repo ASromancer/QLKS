@@ -72,8 +72,6 @@ namespace QLKS
             this.tableAdapterManager.BOPHANTableAdapter = null;
             this.tableAdapterManager.CT_TRANGTHAIPHONGTableAdapter = null;
             this.tableAdapterManager.CTDICHVUTableAdapter = null;
-            this.tableAdapterManager.CTDOIPHONGTableAdapter = null;
-            this.tableAdapterManager.CTKHACHOTableAdapter = null;
             this.tableAdapterManager.CTPHIEUDATTableAdapter = null;
             this.tableAdapterManager.CTPHIEUTHUETableAdapter = null;
             this.tableAdapterManager.DICHVUTableAdapter = null;

@@ -58,6 +58,7 @@ namespace QLKS
             this.HOTEN = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.VAITRO = new System.Windows.Forms.ToolStripLabel();
+            this.btnHD = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -81,10 +82,11 @@ namespace QLKS
             this.btnHangPhong,
             this.btnLoaiPhong,
             this.btnPD,
-            this.btnPT});
+            this.btnPT,
+            this.btnHD});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ribbonControl1.MaxItemId = 14;
+            this.ribbonControl1.MaxItemId = 15;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rib_QUANLY,
@@ -250,6 +252,7 @@ namespace QLKS
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnPD);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnPT);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnHD);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Lập phiếu";
             // 
@@ -317,6 +320,16 @@ namespace QLKS
             this.VAITRO.Size = new System.Drawing.Size(55, 22);
             this.VAITRO.Text = "Vai trò:";
             // 
+            // btnHD
+            // 
+            this.btnHD.Caption = "Hóa đơn";
+            this.btnHD.Id = 14;
+            this.btnHD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.btnHD.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btnHD.LargeWidth = 80;
+            this.btnHD.Name = "btnHD";
+            this.btnHD.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHD_ItemClick);
+            // 
             // frmMain
             // 
             this.Appearance.Options.UseFont = true;
@@ -371,6 +384,7 @@ namespace QLKS
         private DevExpress.XtraBars.BarButtonItem btnPT;
         private DevExpress.XtraBars.Ribbon.RibbonPage rib_LAPPHIEU;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.BarButtonItem btnHD;
     }
 }
 

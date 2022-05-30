@@ -33,9 +33,8 @@ namespace QLKS
             System.Windows.Forms.Label mAPHONGLabel;
             System.Windows.Forms.Label sOPHONGLabel;
             System.Windows.Forms.Label sOTANGLabel;
-            System.Windows.Forms.Label tRANGTHAILabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhong));
             System.Windows.Forms.Label mAHPLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhong));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -55,25 +54,22 @@ namespace QLKS
             this.hANGPHONGTableAdapter = new QLKS.DSTableAdapters.HANGPHONGTableAdapter();
             this.gcPhong = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMAPHONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSOPHONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSOTANG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTRANGTHAI = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMAHP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panelInput = new DevExpress.XtraEditors.PanelControl();
+            this.txtHP = new System.Windows.Forms.TextBox();
+            this.cbxHP = new System.Windows.Forms.ComboBox();
             this.bdsHangPhong = new System.Windows.Forms.BindingSource(this.components);
-            this.txtTrangThai = new DevExpress.XtraEditors.TextEdit();
             this.spnSoTang = new DevExpress.XtraEditors.SpinEdit();
             this.spnSophong = new DevExpress.XtraEditors.SpinEdit();
             this.txtMaPhong = new DevExpress.XtraEditors.TextEdit();
             this.bdsCTPT = new System.Windows.Forms.BindingSource(this.components);
             this.cTPHIEUTHUETableAdapter = new QLKS.DSTableAdapters.CTPHIEUTHUETableAdapter();
-            this.cbxHP = new System.Windows.Forms.ComboBox();
-            this.txtHP = new System.Windows.Forms.TextBox();
+            this.colMAPHONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSOPHONG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSOTANG = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMAHP = new DevExpress.XtraGrid.Columns.GridColumn();
             mAPHONGLabel = new System.Windows.Forms.Label();
             sOPHONGLabel = new System.Windows.Forms.Label();
             sOTANGLabel = new System.Windows.Forms.Label();
-            tRANGTHAILabel = new System.Windows.Forms.Label();
             mAHPLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DS)).BeginInit();
@@ -83,7 +79,6 @@ namespace QLKS
             ((System.ComponentModel.ISupportInitialize)(this.panelInput)).BeginInit();
             this.panelInput.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsHangPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTrangThai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnSoTang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnSophong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaPhong.Properties)).BeginInit();
@@ -117,14 +112,14 @@ namespace QLKS
             sOTANGLabel.TabIndex = 4;
             sOTANGLabel.Text = "SOTANG:";
             // 
-            // tRANGTHAILabel
+            // mAHPLabel
             // 
-            tRANGTHAILabel.AutoSize = true;
-            tRANGTHAILabel.Location = new System.Drawing.Point(54, 125);
-            tRANGTHAILabel.Name = "tRANGTHAILabel";
-            tRANGTHAILabel.Size = new System.Drawing.Size(85, 17);
-            tRANGTHAILabel.TabIndex = 9;
-            tRANGTHAILabel.Text = "TRANGTHAI:";
+            mAHPLabel.AutoSize = true;
+            mAHPLabel.Location = new System.Drawing.Point(92, 124);
+            mAHPLabel.Name = "mAHPLabel";
+            mAHPLabel.Size = new System.Drawing.Size(48, 17);
+            mAHPLabel.TabIndex = 10;
+            mAHPLabel.Text = "MAHP:";
             // 
             // barManager1
             // 
@@ -264,12 +259,12 @@ namespace QLKS
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BOPHANTableAdapter = null;
+            this.tableAdapterManager.CT_TRANGTHAIPHONGTableAdapter = null;
             this.tableAdapterManager.CTDICHVUTableAdapter = null;
-            this.tableAdapterManager.CTDOIPHONGTableAdapter = null;
-            this.tableAdapterManager.CTKHACHOTableAdapter = null;
             this.tableAdapterManager.CTPHIEUDATTableAdapter = null;
             this.tableAdapterManager.CTPHIEUTHUETableAdapter = null;
             this.tableAdapterManager.DICHVUTableAdapter = null;
+            this.tableAdapterManager.DS_PD_CHUACO_PTTableAdapter = null;
             this.tableAdapterManager.HANGPHONGTableAdapter = this.hANGPHONGTableAdapter;
             this.tableAdapterManager.HOADONTableAdapter = null;
             this.tableAdapterManager.KHACHHANGTableAdapter = null;
@@ -277,6 +272,7 @@ namespace QLKS
             this.tableAdapterManager.LOAIPHONGTableAdapter = null;
             this.tableAdapterManager.NHANVIENTableAdapter = null;
             this.tableAdapterManager.PHIEUDATTableAdapter = null;
+            this.tableAdapterManager.PHIEUTHUE_CHUA_HOADONTableAdapter = null;
             this.tableAdapterManager.PHIEUTHUETableAdapter = null;
             this.tableAdapterManager.PHONGTableAdapter = this.pHONGTableAdapter;
             this.tableAdapterManager.UpdateOrder = QLKS.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -304,63 +300,15 @@ namespace QLKS
             this.colMAPHONG,
             this.colSOPHONG,
             this.colSOTANG,
-            this.colTRANGTHAI,
             this.colMAHP});
             this.gridView1.GridControl = this.gcPhong;
             this.gridView1.Name = "gridView1";
-            // 
-            // colMAPHONG
-            // 
-            this.colMAPHONG.FieldName = "MAPHONG";
-            this.colMAPHONG.MinWidth = 25;
-            this.colMAPHONG.Name = "colMAPHONG";
-            this.colMAPHONG.Visible = true;
-            this.colMAPHONG.VisibleIndex = 0;
-            this.colMAPHONG.Width = 94;
-            // 
-            // colSOPHONG
-            // 
-            this.colSOPHONG.FieldName = "SOPHONG";
-            this.colSOPHONG.MinWidth = 25;
-            this.colSOPHONG.Name = "colSOPHONG";
-            this.colSOPHONG.Visible = true;
-            this.colSOPHONG.VisibleIndex = 1;
-            this.colSOPHONG.Width = 94;
-            // 
-            // colSOTANG
-            // 
-            this.colSOTANG.FieldName = "SOTANG";
-            this.colSOTANG.MinWidth = 25;
-            this.colSOTANG.Name = "colSOTANG";
-            this.colSOTANG.Visible = true;
-            this.colSOTANG.VisibleIndex = 2;
-            this.colSOTANG.Width = 94;
-            // 
-            // colTRANGTHAI
-            // 
-            this.colTRANGTHAI.FieldName = "TRANGTHAI";
-            this.colTRANGTHAI.MinWidth = 25;
-            this.colTRANGTHAI.Name = "colTRANGTHAI";
-            this.colTRANGTHAI.Visible = true;
-            this.colTRANGTHAI.VisibleIndex = 3;
-            this.colTRANGTHAI.Width = 94;
-            // 
-            // colMAHP
-            // 
-            this.colMAHP.FieldName = "MAHP";
-            this.colMAHP.MinWidth = 25;
-            this.colMAHP.Name = "colMAHP";
-            this.colMAHP.Visible = true;
-            this.colMAHP.VisibleIndex = 4;
-            this.colMAHP.Width = 94;
             // 
             // panelInput
             // 
             this.panelInput.Controls.Add(this.txtHP);
             this.panelInput.Controls.Add(mAHPLabel);
             this.panelInput.Controls.Add(this.cbxHP);
-            this.panelInput.Controls.Add(tRANGTHAILabel);
-            this.panelInput.Controls.Add(this.txtTrangThai);
             this.panelInput.Controls.Add(sOTANGLabel);
             this.panelInput.Controls.Add(this.spnSoTang);
             this.panelInput.Controls.Add(sOPHONGLabel);
@@ -374,20 +322,32 @@ namespace QLKS
             this.panelInput.TabIndex = 6;
             this.panelInput.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInput_Paint);
             // 
+            // txtHP
+            // 
+            this.txtHP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsPhong, "MAHP", true));
+            this.txtHP.Location = new System.Drawing.Point(302, 121);
+            this.txtHP.Name = "txtHP";
+            this.txtHP.Size = new System.Drawing.Size(100, 23);
+            this.txtHP.TabIndex = 12;
+            // 
+            // cbxHP
+            // 
+            this.cbxHP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHangPhong, "MAHP", true));
+            this.cbxHP.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bdsPhong, "MAHP", true));
+            this.cbxHP.DataSource = this.bdsHangPhong;
+            this.cbxHP.DisplayMember = "MAHP";
+            this.cbxHP.FormattingEnabled = true;
+            this.cbxHP.Location = new System.Drawing.Point(146, 121);
+            this.cbxHP.Name = "cbxHP";
+            this.cbxHP.Size = new System.Drawing.Size(121, 24);
+            this.cbxHP.TabIndex = 11;
+            this.cbxHP.ValueMember = "MAHP";
+            this.cbxHP.SelectedIndexChanged += new System.EventHandler(this.cbxHP_SelectedIndexChanged);
+            // 
             // bdsHangPhong
             // 
             this.bdsHangPhong.DataMember = "HANGPHONG";
             this.bdsHangPhong.DataSource = this.DS;
-            // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsPhong, "TRANGTHAI", true));
-            this.txtTrangThai.Enabled = false;
-            this.txtTrangThai.Location = new System.Drawing.Point(145, 122);
-            this.txtTrangThai.MenuManager = this.barManager1;
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(125, 22);
-            this.txtTrangThai.TabIndex = 10;
             // 
             // spnSoTang
             // 
@@ -454,36 +414,41 @@ namespace QLKS
             // 
             this.cTPHIEUTHUETableAdapter.ClearBeforeFill = true;
             // 
-            // mAHPLabel
+            // colMAPHONG
             // 
-            mAHPLabel.AutoSize = true;
-            mAHPLabel.Location = new System.Drawing.Point(339, 128);
-            mAHPLabel.Name = "mAHPLabel";
-            mAHPLabel.Size = new System.Drawing.Size(48, 17);
-            mAHPLabel.TabIndex = 10;
-            mAHPLabel.Text = "MAHP:";
+            this.colMAPHONG.FieldName = "MAPHONG";
+            this.colMAPHONG.MinWidth = 25;
+            this.colMAPHONG.Name = "colMAPHONG";
+            this.colMAPHONG.Visible = true;
+            this.colMAPHONG.VisibleIndex = 0;
+            this.colMAPHONG.Width = 94;
             // 
-            // cbxHP
+            // colSOPHONG
             // 
-            this.cbxHP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHangPhong, "MAHP", true));
-            this.cbxHP.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.bdsPhong, "MAHP", true));
-            this.cbxHP.DataSource = this.bdsHangPhong;
-            this.cbxHP.DisplayMember = "MAHP";
-            this.cbxHP.FormattingEnabled = true;
-            this.cbxHP.Location = new System.Drawing.Point(393, 125);
-            this.cbxHP.Name = "cbxHP";
-            this.cbxHP.Size = new System.Drawing.Size(121, 24);
-            this.cbxHP.TabIndex = 11;
-            this.cbxHP.ValueMember = "MAHP";
-            this.cbxHP.SelectedIndexChanged += new System.EventHandler(this.cbxHP_SelectedIndexChanged);
+            this.colSOPHONG.FieldName = "SOPHONG";
+            this.colSOPHONG.MinWidth = 25;
+            this.colSOPHONG.Name = "colSOPHONG";
+            this.colSOPHONG.Visible = true;
+            this.colSOPHONG.VisibleIndex = 1;
+            this.colSOPHONG.Width = 94;
             // 
-            // txtHP
+            // colSOTANG
             // 
-            this.txtHP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsPhong, "MAHP", true));
-            this.txtHP.Location = new System.Drawing.Point(549, 125);
-            this.txtHP.Name = "txtHP";
-            this.txtHP.Size = new System.Drawing.Size(100, 23);
-            this.txtHP.TabIndex = 12;
+            this.colSOTANG.FieldName = "SOTANG";
+            this.colSOTANG.MinWidth = 25;
+            this.colSOTANG.Name = "colSOTANG";
+            this.colSOTANG.Visible = true;
+            this.colSOTANG.VisibleIndex = 2;
+            this.colSOTANG.Width = 94;
+            // 
+            // colMAHP
+            // 
+            this.colMAHP.FieldName = "MAHP";
+            this.colMAHP.MinWidth = 25;
+            this.colMAHP.Name = "colMAHP";
+            this.colMAHP.Visible = true;
+            this.colMAHP.VisibleIndex = 3;
+            this.colMAHP.Width = 94;
             // 
             // frmPhong
             // 
@@ -508,7 +473,6 @@ namespace QLKS
             this.panelInput.ResumeLayout(false);
             this.panelInput.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsHangPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTrangThai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnSoTang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnSophong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaPhong.Properties)).EndInit();
@@ -540,12 +504,6 @@ namespace QLKS
         private DevExpress.XtraEditors.SpinEdit spnSoTang;
         private DevExpress.XtraEditors.SpinEdit spnSophong;
         private DevExpress.XtraEditors.TextEdit txtMaPhong;
-        private DevExpress.XtraGrid.Columns.GridColumn colMAPHONG;
-        private DevExpress.XtraGrid.Columns.GridColumn colSOPHONG;
-        private DevExpress.XtraGrid.Columns.GridColumn colSOTANG;
-        private DevExpress.XtraGrid.Columns.GridColumn colTRANGTHAI;
-        private DevExpress.XtraGrid.Columns.GridColumn colMAHP;
-        private DevExpress.XtraEditors.TextEdit txtTrangThai;
         private DevExpress.XtraBars.BarButtonItem btnHuy;
         private DevExpress.XtraBars.BarButtonItem btnLamMoi;
         private DSTableAdapters.HANGPHONGTableAdapter hANGPHONGTableAdapter;
@@ -554,5 +512,9 @@ namespace QLKS
         private DSTableAdapters.CTPHIEUTHUETableAdapter cTPHIEUTHUETableAdapter;
         private System.Windows.Forms.TextBox txtHP;
         private System.Windows.Forms.ComboBox cbxHP;
+        private DevExpress.XtraGrid.Columns.GridColumn colMAPHONG;
+        private DevExpress.XtraGrid.Columns.GridColumn colSOPHONG;
+        private DevExpress.XtraGrid.Columns.GridColumn colSOTANG;
+        private DevExpress.XtraGrid.Columns.GridColumn colMAHP;
     }
 }

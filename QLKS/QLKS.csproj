@@ -146,6 +146,12 @@
     <Compile Include="frmPhieuThue.Designer.cs">
       <DependentUpon>frmPhieuThue.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPhieuThueChuaHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPhieuThueChuaHoaDon.Designer.cs">
+      <DependentUpon>frmPhieuThueChuaHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhieuThue.resx">
       <DependentUpon>frmPhieuThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPhieuThueChuaHoaDon.resx">
+      <DependentUpon>frmPhieuThueChuaHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhong.resx">
       <DependentUpon>frmPhong.cs</DependentUpon>

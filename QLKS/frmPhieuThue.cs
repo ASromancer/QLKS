@@ -218,6 +218,12 @@ namespace QLKS
         {
             string manv = ((DataRowView)bdsPT[bdsPT.Position])["MANV"].ToString();
 
+            if (bdsPT.Count == 0)
+            {
+                MessageBox.Show("Không còn gì để ghi");
+                return;
+            }
+
             if (manv != Program.manv)
             {
                 MessageBox.Show("Không thể ghi phiếu thuê không phải của chính mình lập!");
@@ -267,6 +273,12 @@ namespace QLKS
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             string manv = ((DataRowView)bdsPT[bdsPT.Position])["MANV"].ToString();
+
+            if (bdsPT.Count == 0)
+            {
+                MessageBox.Show("Không còn gì để xóa");
+                return;
+            }
 
             if (manv != Program.manv)
             {

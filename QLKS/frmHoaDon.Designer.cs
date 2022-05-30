@@ -31,11 +31,11 @@ namespace QLKS
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label mAHDLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             System.Windows.Forms.Label gHICHULabel;
             System.Windows.Forms.Label mAPTLabel;
             System.Windows.Forms.Label mANVLabel;
             System.Windows.Forms.Label nGAYTAOLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHoaDon));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -55,21 +55,23 @@ namespace QLKS
             this.tableAdapterManager = new QLKS.DSTableAdapters.TableAdapterManager();
             this.gcHD = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.panelInput = new DevExpress.XtraEditors.PanelControl();
-            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.colMAHD = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTONGTIEN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGHICHU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAPT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNGAYTAO = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.txtGhiChu = new DevExpress.XtraEditors.TextEdit();
-            this.txtMaPT = new System.Windows.Forms.TextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.panelInput = new DevExpress.XtraEditors.PanelControl();
+            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
+            this.btnXuatCTHoaDon = new System.Windows.Forms.Button();
+            this.btnChonPT = new System.Windows.Forms.Button();
             this.txtNgayTao = new DevExpress.XtraEditors.TimeEdit();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtMaPT = new System.Windows.Forms.TextBox();
+            this.txtGhiChu = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaHD = new System.Windows.Forms.TextBox();
             this.bdsPT = new System.Windows.Forms.BindingSource(this.components);
             this.pHIEUTHUETableAdapter = new QLKS.DSTableAdapters.PHIEUTHUETableAdapter();
-            this.btnChonPT = new System.Windows.Forms.Button();
             mAHDLabel = new System.Windows.Forms.Label();
             gHICHULabel = new System.Windows.Forms.Label();
             mAPTLabel = new System.Windows.Forms.Label();
@@ -82,8 +84,9 @@ namespace QLKS
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelInput)).BeginInit();
             this.panelInput.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayTao.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsPT)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +98,42 @@ namespace QLKS
             mAHDLabel.Size = new System.Drawing.Size(50, 17);
             mAHDLabel.TabIndex = 0;
             mAHDLabel.Text = "MAHD:";
+            // 
+            // gHICHULabel
+            // 
+            gHICHULabel.AutoSize = true;
+            gHICHULabel.Location = new System.Drawing.Point(84, 110);
+            gHICHULabel.Name = "gHICHULabel";
+            gHICHULabel.Size = new System.Drawing.Size(62, 17);
+            gHICHULabel.TabIndex = 2;
+            gHICHULabel.Text = "GHICHU:";
+            // 
+            // mAPTLabel
+            // 
+            mAPTLabel.AutoSize = true;
+            mAPTLabel.Location = new System.Drawing.Point(374, 179);
+            mAPTLabel.Name = "mAPTLabel";
+            mAPTLabel.Size = new System.Drawing.Size(47, 17);
+            mAPTLabel.TabIndex = 4;
+            mAPTLabel.Text = "MAPT:";
+            // 
+            // mANVLabel
+            // 
+            mANVLabel.AutoSize = true;
+            mANVLabel.Location = new System.Drawing.Point(373, 110);
+            mANVLabel.Name = "mANVLabel";
+            mANVLabel.Size = new System.Drawing.Size(48, 17);
+            mANVLabel.TabIndex = 6;
+            mANVLabel.Text = "MANV:";
+            // 
+            // nGAYTAOLabel
+            // 
+            nGAYTAOLabel.AutoSize = true;
+            nGAYTAOLabel.Location = new System.Drawing.Point(348, 43);
+            nGAYTAOLabel.Name = "nGAYTAOLabel";
+            nGAYTAOLabel.Size = new System.Drawing.Size(73, 17);
+            nGAYTAOLabel.TabIndex = 8;
+            nGAYTAOLabel.Text = "NGAYTAO:";
             // 
             // barManager1
             // 
@@ -138,6 +177,7 @@ namespace QLKS
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.LargeImage")));
             this.btnThem.Name = "btnThem";
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
             // 
             // btnGhi
             // 
@@ -146,6 +186,7 @@ namespace QLKS
             this.btnGhi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.Image")));
             this.btnGhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnGhi.ImageOptions.LargeImage")));
             this.btnGhi.Name = "btnGhi";
+            this.btnGhi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnGhi_ItemClick);
             // 
             // btnXoa
             // 
@@ -154,6 +195,7 @@ namespace QLKS
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
             this.btnXoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.LargeImage")));
             this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
             // 
             // btnHuy
             // 
@@ -163,6 +205,7 @@ namespace QLKS
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
             this.btnHuy.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.LargeImage")));
             this.btnHuy.Name = "btnHuy";
+            this.btnHuy.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnHuy_ItemClick);
             // 
             // btnLamMoi
             // 
@@ -171,6 +214,7 @@ namespace QLKS
             this.btnLamMoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.Image")));
             this.btnLamMoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.ImageOptions.LargeImage")));
             this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLamMoi_ItemClick);
             // 
             // btnThoat
             // 
@@ -179,6 +223,7 @@ namespace QLKS
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.LargeImage")));
             this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -237,8 +282,6 @@ namespace QLKS
             this.tableAdapterManager.BOPHANTableAdapter = null;
             this.tableAdapterManager.CT_TRANGTHAIPHONGTableAdapter = null;
             this.tableAdapterManager.CTDICHVUTableAdapter = null;
-            this.tableAdapterManager.CTDOIPHONGTableAdapter = null;
-            this.tableAdapterManager.CTKHACHOTableAdapter = null;
             this.tableAdapterManager.CTPHIEUDATTableAdapter = null;
             this.tableAdapterManager.CTPHIEUTHUETableAdapter = null;
             this.tableAdapterManager.DICHVUTableAdapter = null;
@@ -250,6 +293,7 @@ namespace QLKS
             this.tableAdapterManager.LOAIPHONGTableAdapter = null;
             this.tableAdapterManager.NHANVIENTableAdapter = null;
             this.tableAdapterManager.PHIEUDATTableAdapter = null;
+            this.tableAdapterManager.PHIEUTHUE_CHUA_HOADONTableAdapter = null;
             this.tableAdapterManager.PHIEUTHUETableAdapter = null;
             this.tableAdapterManager.PHONGTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLKS.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -278,33 +322,6 @@ namespace QLKS
             this.colNGAYTAO});
             this.gridView1.GridControl = this.gcHD;
             this.gridView1.Name = "gridView1";
-            // 
-            // panelInput
-            // 
-            this.panelInput.Controls.Add(this.btnChonPT);
-            this.panelInput.Controls.Add(nGAYTAOLabel);
-            this.panelInput.Controls.Add(this.txtNgayTao);
-            this.panelInput.Controls.Add(mANVLabel);
-            this.panelInput.Controls.Add(this.txtMaNV);
-            this.panelInput.Controls.Add(mAPTLabel);
-            this.panelInput.Controls.Add(this.txtMaPT);
-            this.panelInput.Controls.Add(gHICHULabel);
-            this.panelInput.Controls.Add(this.txtGhiChu);
-            this.panelInput.Controls.Add(mAHDLabel);
-            this.panelInput.Controls.Add(this.txtMaHD);
-            this.panelInput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelInput.Location = new System.Drawing.Point(0, 259);
-            this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(1376, 411);
-            this.panelInput.TabIndex = 6;
-            // 
-            // txtMaHD
-            // 
-            this.txtMaHD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHD, "MAHD", true));
-            this.txtMaHD.Location = new System.Drawing.Point(152, 40);
-            this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(125, 23);
-            this.txtMaHD.TabIndex = 1;
             // 
             // colMAHD
             // 
@@ -360,68 +377,55 @@ namespace QLKS
             this.colNGAYTAO.VisibleIndex = 5;
             this.colNGAYTAO.Width = 94;
             // 
-            // gHICHULabel
+            // panelInput
             // 
-            gHICHULabel.AutoSize = true;
-            gHICHULabel.Location = new System.Drawing.Point(84, 110);
-            gHICHULabel.Name = "gHICHULabel";
-            gHICHULabel.Size = new System.Drawing.Size(62, 17);
-            gHICHULabel.TabIndex = 2;
-            gHICHULabel.Text = "GHICHU:";
+            this.panelInput.Controls.Add(this.separatorControl1);
+            this.panelInput.Controls.Add(this.btnXuatCTHoaDon);
+            this.panelInput.Controls.Add(this.btnChonPT);
+            this.panelInput.Controls.Add(nGAYTAOLabel);
+            this.panelInput.Controls.Add(this.txtNgayTao);
+            this.panelInput.Controls.Add(mANVLabel);
+            this.panelInput.Controls.Add(this.txtMaNV);
+            this.panelInput.Controls.Add(mAPTLabel);
+            this.panelInput.Controls.Add(this.txtMaPT);
+            this.panelInput.Controls.Add(gHICHULabel);
+            this.panelInput.Controls.Add(this.txtGhiChu);
+            this.panelInput.Controls.Add(mAHDLabel);
+            this.panelInput.Controls.Add(this.txtMaHD);
+            this.panelInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelInput.Location = new System.Drawing.Point(0, 259);
+            this.panelInput.Name = "panelInput";
+            this.panelInput.Size = new System.Drawing.Size(1376, 411);
+            this.panelInput.TabIndex = 6;
             // 
-            // txtGhiChu
+            // separatorControl1
             // 
-            this.txtGhiChu.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsHD, "GHICHU", true));
-            this.txtGhiChu.Location = new System.Drawing.Point(152, 107);
-            this.txtGhiChu.MenuManager = this.barManager1;
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(125, 22);
-            this.txtGhiChu.TabIndex = 3;
+            this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
+            this.separatorControl1.Location = new System.Drawing.Point(685, 6);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Size = new System.Drawing.Size(30, 400);
+            this.separatorControl1.TabIndex = 12;
             // 
-            // mAPTLabel
+            // btnXuatCTHoaDon
             // 
-            mAPTLabel.AutoSize = true;
-            mAPTLabel.Location = new System.Drawing.Point(374, 179);
-            mAPTLabel.Name = "mAPTLabel";
-            mAPTLabel.Size = new System.Drawing.Size(47, 17);
-            mAPTLabel.TabIndex = 4;
-            mAPTLabel.Text = "MAPT:";
+            this.btnXuatCTHoaDon.Location = new System.Drawing.Point(802, 43);
+            this.btnXuatCTHoaDon.Name = "btnXuatCTHoaDon";
+            this.btnXuatCTHoaDon.Size = new System.Drawing.Size(161, 41);
+            this.btnXuatCTHoaDon.TabIndex = 11;
+            this.btnXuatCTHoaDon.Text = "Xem chi tiết hóa đơn";
+            this.btnXuatCTHoaDon.UseVisualStyleBackColor = true;
+            this.btnXuatCTHoaDon.Click += new System.EventHandler(this.btnXuatCTHoaDon_Click);
             // 
-            // txtMaPT
+            // btnChonPT
             // 
-            this.txtMaPT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHD, "MAPT", true));
-            this.txtMaPT.Location = new System.Drawing.Point(427, 176);
-            this.txtMaPT.Name = "txtMaPT";
-            this.txtMaPT.ReadOnly = true;
-            this.txtMaPT.Size = new System.Drawing.Size(100, 23);
-            this.txtMaPT.TabIndex = 5;
-            // 
-            // mANVLabel
-            // 
-            mANVLabel.AutoSize = true;
-            mANVLabel.Location = new System.Drawing.Point(373, 110);
-            mANVLabel.Name = "mANVLabel";
-            mANVLabel.Size = new System.Drawing.Size(48, 17);
-            mANVLabel.TabIndex = 6;
-            mANVLabel.Text = "MANV:";
-            // 
-            // txtMaNV
-            // 
-            this.txtMaNV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHD, "MANV", true));
-            this.txtMaNV.Location = new System.Drawing.Point(427, 107);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.ReadOnly = true;
-            this.txtMaNV.Size = new System.Drawing.Size(100, 23);
-            this.txtMaNV.TabIndex = 7;
-            // 
-            // nGAYTAOLabel
-            // 
-            nGAYTAOLabel.AutoSize = true;
-            nGAYTAOLabel.Location = new System.Drawing.Point(348, 43);
-            nGAYTAOLabel.Name = "nGAYTAOLabel";
-            nGAYTAOLabel.Size = new System.Drawing.Size(73, 17);
-            nGAYTAOLabel.TabIndex = 8;
-            nGAYTAOLabel.Text = "NGAYTAO:";
+            this.btnChonPT.Enabled = false;
+            this.btnChonPT.Location = new System.Drawing.Point(135, 167);
+            this.btnChonPT.Name = "btnChonPT";
+            this.btnChonPT.Size = new System.Drawing.Size(161, 41);
+            this.btnChonPT.TabIndex = 10;
+            this.btnChonPT.Text = "Chọn phiếu thuê";
+            this.btnChonPT.UseVisualStyleBackColor = true;
+            this.btnChonPT.Click += new System.EventHandler(this.btnChonPT_Click);
             // 
             // txtNgayTao
             // 
@@ -437,6 +441,42 @@ namespace QLKS
             this.txtNgayTao.Size = new System.Drawing.Size(185, 24);
             this.txtNgayTao.TabIndex = 9;
             // 
+            // txtMaNV
+            // 
+            this.txtMaNV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHD, "MANV", true));
+            this.txtMaNV.Location = new System.Drawing.Point(427, 107);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.ReadOnly = true;
+            this.txtMaNV.Size = new System.Drawing.Size(100, 23);
+            this.txtMaNV.TabIndex = 7;
+            // 
+            // txtMaPT
+            // 
+            this.txtMaPT.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHD, "MAPT", true));
+            this.txtMaPT.Location = new System.Drawing.Point(427, 176);
+            this.txtMaPT.Name = "txtMaPT";
+            this.txtMaPT.ReadOnly = true;
+            this.txtMaPT.Size = new System.Drawing.Size(100, 23);
+            this.txtMaPT.TabIndex = 5;
+            // 
+            // txtGhiChu
+            // 
+            this.txtGhiChu.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsHD, "GHICHU", true));
+            this.txtGhiChu.Location = new System.Drawing.Point(152, 107);
+            this.txtGhiChu.MenuManager = this.barManager1;
+            this.txtGhiChu.Name = "txtGhiChu";
+            this.txtGhiChu.Size = new System.Drawing.Size(125, 22);
+            this.txtGhiChu.TabIndex = 3;
+            // 
+            // txtMaHD
+            // 
+            this.txtMaHD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsHD, "MAHD", true));
+            this.txtMaHD.Enabled = false;
+            this.txtMaHD.Location = new System.Drawing.Point(152, 40);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(125, 23);
+            this.txtMaHD.TabIndex = 1;
+            // 
             // bdsPT
             // 
             this.bdsPT.DataMember = "PHIEUTHUE";
@@ -445,16 +485,6 @@ namespace QLKS
             // pHIEUTHUETableAdapter
             // 
             this.pHIEUTHUETableAdapter.ClearBeforeFill = true;
-            // 
-            // btnChonPT
-            // 
-            this.btnChonPT.Location = new System.Drawing.Point(135, 167);
-            this.btnChonPT.Name = "btnChonPT";
-            this.btnChonPT.Size = new System.Drawing.Size(161, 41);
-            this.btnChonPT.TabIndex = 10;
-            this.btnChonPT.Text = "Chọn phiếu thuê";
-            this.btnChonPT.UseVisualStyleBackColor = true;
-            this.btnChonPT.Click += new System.EventHandler(this.btnChonPT_Click);
             // 
             // frmHoaDon
             // 
@@ -480,8 +510,9 @@ namespace QLKS
             ((System.ComponentModel.ISupportInitialize)(this.panelInput)).EndInit();
             this.panelInput.ResumeLayout(false);
             this.panelInput.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNgayTao.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGhiChu.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsPT)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -524,5 +555,7 @@ namespace QLKS
         private System.Windows.Forms.BindingSource bdsPT;
         private DSTableAdapters.PHIEUTHUETableAdapter pHIEUTHUETableAdapter;
         private System.Windows.Forms.Button btnChonPT;
+        private System.Windows.Forms.Button btnXuatCTHoaDon;
+        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
     }
 }

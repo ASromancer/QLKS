@@ -103,7 +103,6 @@ namespace QLKS
             txtMaPhong.Focus();
             spnSophong.Value = 0;
             spnSoTang.Value = 0;
-            txtTrangThai.Text = "Trống";
             cbxHP.SelectedIndex = 1;
 
             btnThem.Enabled = btnThoat.Enabled = btnXoa.Enabled = btnLamMoi.Enabled = false;

@@ -53,7 +53,6 @@ namespace QLKS
             this.bdsHangPhong = new System.Windows.Forms.BindingSource(this.components);
             this.hANGPHONGTableAdapter = new QLKS.DSTableAdapters.HANGPHONGTableAdapter();
             this.tableAdapterManager = new QLKS.DSTableAdapters.TableAdapterManager();
-            this.cTPHIEUDATTableAdapter = new QLKS.DSTableAdapters.CTPHIEUDATTableAdapter();
             this.kIEUPHONGTableAdapter = new QLKS.DSTableAdapters.KIEUPHONGTableAdapter();
             this.lOAIPHONGTableAdapter = new QLKS.DSTableAdapters.LOAIPHONGTableAdapter();
             this.pHONGTableAdapter = new QLKS.DSTableAdapters.PHONGTableAdapter();
@@ -73,7 +72,6 @@ namespace QLKS
             this.txtGiaHP = new DevExpress.XtraEditors.TextEdit();
             this.txtMaHP = new DevExpress.XtraEditors.TextEdit();
             this.bdsPhong = new System.Windows.Forms.BindingSource(this.components);
-            this.bdsCTPD = new System.Windows.Forms.BindingSource(this.components);
             mAHPLabel = new System.Windows.Forms.Label();
             gIAHANGPHONGLabel = new System.Windows.Forms.Label();
             tENKIEUPHONGLabel = new System.Windows.Forms.Label();
@@ -92,7 +90,6 @@ namespace QLKS
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaHP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaHP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCTPD)).BeginInit();
             this.SuspendLayout();
             // 
             // mAHPLabel
@@ -287,12 +284,11 @@ namespace QLKS
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.BOPHANTableAdapter = null;
+            this.tableAdapterManager.CT_TRANGTHAIPHONGTableAdapter = null;
             this.tableAdapterManager.CTDICHVUTableAdapter = null;
-            this.tableAdapterManager.CTDOIPHONGTableAdapter = null;
-            this.tableAdapterManager.CTKHACHOTableAdapter = null;
-            this.tableAdapterManager.CTPHIEUDATTableAdapter = this.cTPHIEUDATTableAdapter;
             this.tableAdapterManager.CTPHIEUTHUETableAdapter = null;
             this.tableAdapterManager.DICHVUTableAdapter = null;
+            this.tableAdapterManager.DS_PD_CHUACO_PTTableAdapter = null;
             this.tableAdapterManager.HANGPHONGTableAdapter = this.hANGPHONGTableAdapter;
             this.tableAdapterManager.HOADONTableAdapter = null;
             this.tableAdapterManager.KHACHHANGTableAdapter = null;
@@ -300,13 +296,10 @@ namespace QLKS
             this.tableAdapterManager.LOAIPHONGTableAdapter = this.lOAIPHONGTableAdapter;
             this.tableAdapterManager.NHANVIENTableAdapter = null;
             this.tableAdapterManager.PHIEUDATTableAdapter = null;
+            this.tableAdapterManager.PHIEUTHUE_CHUA_HOADONTableAdapter = null;
             this.tableAdapterManager.PHIEUTHUETableAdapter = null;
             this.tableAdapterManager.PHONGTableAdapter = this.pHONGTableAdapter;
             this.tableAdapterManager.UpdateOrder = QLKS.DSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // cTPHIEUDATTableAdapter
-            // 
-            this.cTPHIEUDATTableAdapter.ClearBeforeFill = true;
             // 
             // kIEUPHONGTableAdapter
             // 
@@ -485,11 +478,6 @@ namespace QLKS
             this.bdsPhong.DataMember = "FK__PHONG__MAHP__412EB0B6";
             this.bdsPhong.DataSource = this.bdsHangPhong;
             // 
-            // bdsCTPD
-            // 
-            this.bdsCTPD.DataMember = "FK__CTPHIEUDAT__MAHP__5FB337D6";
-            this.bdsCTPD.DataSource = this.bdsHangPhong;
-            // 
             // frmHangPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -519,7 +507,6 @@ namespace QLKS
             ((System.ComponentModel.ISupportInitialize)(this.txtGiaHP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaHP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCTPD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -550,8 +537,6 @@ namespace QLKS
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DSTableAdapters.PHONGTableAdapter pHONGTableAdapter;
         private System.Windows.Forms.BindingSource bdsPhong;
-        private DSTableAdapters.CTPHIEUDATTableAdapter cTPHIEUDATTableAdapter;
-        private System.Windows.Forms.BindingSource bdsCTPD;
         private DSTableAdapters.KIEUPHONGTableAdapter kIEUPHONGTableAdapter;
         private System.Windows.Forms.BindingSource bdsKieuPhong;
         private DSTableAdapters.LOAIPHONGTableAdapter lOAIPHONGTableAdapter;

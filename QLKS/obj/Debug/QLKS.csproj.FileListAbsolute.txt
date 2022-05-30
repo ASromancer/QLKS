@@ -104,3 +104,4 @@ D:\homeWork_task\QLKS\QLKS\obj\Debug\QLKS.frmPDKhongPT.resources
 D:\homeWork_task\QLKS\QLKS\obj\Debug\QLKS.frmChonPhong.resources
 D:\homeWork_task\QLKS\QLKS\obj\Debug\QLKS.frmChonDichVu.resources
 D:\homeWork_task\QLKS\QLKS\obj\Debug\QLKS.frmHoaDon.resources
+D:\homeWork_task\QLKS\QLKS\obj\Debug\QLKS.frmPhieuThueChuaHoaDon.resources
